@@ -8,17 +8,12 @@
 */
 
 {{ config(materialized='table') }}
-
-with source_data as (
-
-    select 1 as id
-    union all
-    select null as id
-
-)
-
-select *
-from source_data
+WITH parent_query AS (
+select f.amount,d.country from workspace.gold.factbookings f
+left join workspace.gold.dimairports d on f.DimAirportsKey = d.DimAirportsKey )
+select country,sum(amount) as total_amount
+from parent_query
+group by country 
 
 /*
     Uncomment the line below to remove records with null `id` values
