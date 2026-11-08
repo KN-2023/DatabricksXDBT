@@ -1,4 +1,4 @@
-## DatabricksXDBT
+## Databricks Lakehouse – Streaming, CDC & Dimensional Modeling
 
 ### Architecture
 <img width="450" height="250" alt="Modern ETL Data Pipeline Diagram" src="https://github.com/user-attachments/assets/7a39e3f1-2ecb-4bf6-8cdc-30b7a6a502b0" />
